@@ -1,0 +1,26 @@
+{
+  "name": "ts-class-to-interface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyAeroCode/ts-class-to-interface.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyAeroCode/ts-class-to-interface/issues"
+  },
+  "homepage": "https://github.com/MyAeroCode/ts-class-to-interface#readme",
+  "devDependencies": {
+    "@types/node": "^18.8.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
