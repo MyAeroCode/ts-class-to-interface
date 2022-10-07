@@ -1,4 +1,4 @@
-import { Pipe, TPipe } from "@core/pipe/Pipe";
+import { IPipe, TPipe } from "@core/pipe/Pipe";
 
 export interface IPipeLine {
   execute: (input: string) => string;
@@ -9,7 +9,7 @@ export interface TPipeLine {
 }
 
 export class PipeLine implements IPipeLine {
-  private readonly pipes: Pipe[];
+  private readonly pipes: IPipe[];
 
   constructor(pipes: TPipe[]) {
     this.pipes = pipes.map((p) => new p());

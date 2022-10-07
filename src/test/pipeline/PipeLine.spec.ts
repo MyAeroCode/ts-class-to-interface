@@ -1,9 +1,9 @@
 import { PipeLine } from "@core/pipeline/PipeLine";
-import { Pipe, TPipe } from "@core/pipe/Pipe";
+import { IPipe, Pipe, TPipe } from "@core/pipe/Pipe";
 
 function createAppendPipeClass(postfix: string): TPipe {
-  return class AppendPipe extends Pipe {
-    process(input: string): string {
+  return class AppendPipe extends Pipe implements IPipe {
+    protected processImpl(input: string): string {
       return input + postfix;
     }
   };

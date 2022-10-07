@@ -1,3 +1,5 @@
+import prettier from "prettier";
+
 export interface IPipe {
   process: (input: string) => string;
 }
@@ -7,5 +9,13 @@ export interface TPipe {
 }
 
 export abstract class Pipe {
-  abstract process(input: string): string;
+  protected abstract processImpl(input: string): string;
+
+  protected formatCode(input: string): string {
+    return prettier.format(input, {});
+  }
+
+  process(input: string): string {
+    return this.processImpl(input);
+  }
 }
